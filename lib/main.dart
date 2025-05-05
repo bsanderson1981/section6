@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 // git init && git add . && git commit -m "Initial commit" && git remote add origin https://github.com/bsanderson1981/section6 && git branch -M main && git push -u origin main
+//
+// #41 completete
+
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +19,8 @@ class MyApp extends StatelessWidget {
           child: Container(
             height: 100.0,
               width: 100.0,
-              margin: EdgeInsets.symmetric(vertical: 50.0,horizontal: 10.0),
+              margin: EdgeInsets.only(left: 30.0),
+              padding: EdgeInsets.all(20.0),
               color: Colors.white,
               child: Text('Hello')
           ),
