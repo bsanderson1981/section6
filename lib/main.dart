@@ -16,27 +16,36 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            children: [
-              // First column - red background
-              Container(width: 100,color: Colors.red, height: double.infinity),
-
-
-              // Second column - two stacked boxes
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(width: 100, height: 100, color: Colors.yellow),
-                    Container(width: 100, height: 100, color: Colors.green),
-                  ],
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // optional: centers vertically
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 50.0,
+                  foregroundImage: AssetImage('images/billicon.jpg'),
                 ),
-              ),
+                Text('Bill Sanderson',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+                ),
+                 Text('FlUTTER GRU',
+                  style: TextStyle(
+                      fontFamily: 'SourceCodePro',
+                  fontSize: 20.0,
+                  letterSpacing: 3.5,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
 
-              // Third column - blue background
-              Container(width: 100,color: Colors.blue, height: double.infinity),
 
-            ],
+                ),
+        ),
+              ],
+            ),
           ),
         ),
       ),
