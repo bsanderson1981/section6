@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // git init && git add . && git commit -m "Initial commit" && git remote add origin https://github.com/bsanderson1981/section6 && git branch -M main && git push -u origin main
 //
-// #41 completete
+// #43 layout challenge  complete
 
 void main() {
   runApp(MyApp());
@@ -16,13 +16,30 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-              width: 100.0,
-              margin: EdgeInsets.only(left: 30.0),
-              padding: EdgeInsets.all(20.0),
-              color: Colors.white,
-              child: Text('Hello')
+          child: Row(
+            children: [
+              // First column - red background
+              Expanded(
+                child: Container(color: Colors.red, height: double.infinity),
+              ),
+
+              // Second column - two stacked boxes
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(width: 100, height: 100, color: Colors.yellow),
+                    SizedBox(height: 20),
+                    Container(width: 100, height: 100, color: Colors.green),
+                  ],
+                ),
+              ),
+
+              // Third column - blue background
+              Expanded(
+                child: Container(color: Colors.blue, height: double.infinity),
+              ),
+            ],
           ),
         ),
       ),
