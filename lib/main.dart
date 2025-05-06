@@ -19,9 +19,8 @@ class MyApp extends StatelessWidget {
           child: Row(
             children: [
               // First column - red background
-              Expanded(
-                child: Container(color: Colors.red, height: double.infinity),
-              ),
+              Container(width: 100,color: Colors.red, height: double.infinity),
+
 
               // Second column - two stacked boxes
               Expanded(
@@ -29,16 +28,14 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(width: 100, height: 100, color: Colors.yellow),
-                    SizedBox(height: 20),
                     Container(width: 100, height: 100, color: Colors.green),
                   ],
                 ),
               ),
 
               // Third column - blue background
-              Expanded(
-                child: Container(color: Colors.blue, height: double.infinity),
-              ),
+              Container(width: 100,color: Colors.blue, height: double.infinity),
+
             ],
           ),
         ),
